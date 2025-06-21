@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use \Orchestra\Testbench\TestCase as BaseTestCase;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 use SoareCostin\FileVault\Facades\FileVault;
 use SoareCostin\FileVault\FileVaultServiceProvider;
 
@@ -12,7 +12,6 @@ abstract class TestCase extends BaseTestCase
      * Get package providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
-     *
      * @return array
      */
     protected function getPackageProviders($app)
@@ -26,7 +25,6 @@ abstract class TestCase extends BaseTestCase
      * Get package aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
-     *
      * @return array
      */
     protected function getPackageAliases($app)
@@ -61,7 +59,7 @@ abstract class TestCase extends BaseTestCase
     protected function generateRandomKey()
     {
         return 'base64:'.base64_encode(
-                \SoareCostin\FileVault\FileVault::generateKey()
-            );
+            \SoareCostin\FileVault\FileVault::generateKey()
+        );
     }
 }

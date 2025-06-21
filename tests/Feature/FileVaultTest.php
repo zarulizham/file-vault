@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Storage;
 use SoareCostin\FileVault\Facades\FileVault;
+
 use function PHPUnit\Framework\assertFileDoesNotExist;
 
 /**
@@ -142,5 +143,4 @@ test('it can stream a decrypted file', function () {
 afterEach(function () {
     // Cleanup the storage dir
     array_map('unlink', glob(__DIR__.'/../storage/app/*.*'));
-
 });
